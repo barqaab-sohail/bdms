@@ -234,24 +234,6 @@ Route::group(['prefix' => 'hrms', 'middleware' => ['auth','XssSanitizer'], 'name
 	
 });
 
-//Submission Routes
-Route::group(['prefix' => 'hrms', 'middleware' => ['auth','XssSanitizer'], 'namespace'=>'Submission'], function(){
-
-
-	
-	Route::get('/submission/eoiReference','SubmissionController@eoiReference');
-	Route::get('/submission/submissionNo/{id}','SubmissionController@submissionNo');
-	Route::resource('/submission', 'SubmissionController');
-	Route::resource('/submissionPartner', 'PartnerController');
-	Route::resource('/submissionDate', 'DateAndTimeController');
-	Route::resource('/submissionContact', 'SubContactController');
-	Route::resource('/submissionScope', 'SubScopeController');
-	Route::resource('/submissionPosition', 'SubPositionController');
-	Route::resource('/submissionCompetitor', 'SubCompetitorController');
-	Route::resource('/submissionDocument', 'SubmissionDocumentController');
-	Route::get('/submissionDocument/refreshTable', 'SubmissionDocumentController@refreshTable')->name('submissionDocument.table');
-
-});
 
 //Admin Routes
 Route::group(['prefix' => 'hrms/admin', 'middleware' => ['auth','XssSanitizer'], 'namespace'=>'Admin'], function(){
