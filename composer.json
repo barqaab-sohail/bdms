@@ -1,0 +1,96 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.5|^8.0",
+        "asika/pdf2text": "1.*",
+        "barryvdh/laravel-snappy": "^1.0",
+        "consoletvs/charts": "7.*",
+        "felixkiss/uniquewith-validator": "^3.4",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "h4cc/wkhtmltoimage-i386": "0.12.x",
+        "h4cc/wkhtmltopdf-i386": "0.12.x",
+        "laravel/framework": "^8.0",
+        "laravel/sanctum": "^2.14",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^3.0",
+        "maatwebsite/excel": "^3.1",
+        "milon/barcode": "^8.0",
+        "owen-it/laravel-auditing": "^12.0",
+        "simplesoftwareio/simple-qrcode": "^4.2",
+        "spatie/laravel-backup": "^6.8",
+        "spatie/laravel-permission": "^3.11",
+        "staudenmeir/belongs-to-through": "^2.5",
+        "yajra/laravel-datatables": "1.5",
+        "yajra/laravel-datatables-buttons": "^4.13",
+        "yajra/laravel-datatables-html": "^4.0",
+        "yajra/laravel-datatables-oracle": "~9.0"
+
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
+        "facade/ignition": "^2.0",
+       
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "files":[
+            "app/Helper/functions.php"
+            ],
+        "psr-4": {
+            "App\\": "app/", 
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+         "files":[
+            "app/Helper/DocxConversion.php",
+            "app/Helper/chartFunctions.php",
+            "app/Helper/Hr/hrFunctions.php",
+            "app/Helper/Project/prFunctions.php",
+            "app/Helper/Leave/leaveFunctions.php"
+            ],
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}
