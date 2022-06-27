@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class PermissionsTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('permissions')->delete();
+        \DB::table('permissions')->delete();
 
         $permissions = array(
 			array('name' => 'hr view record', 'guard_name' => 'web'),
@@ -47,6 +47,6 @@ class PermissionsTableSeeder extends Seeder
             array('name' => 'asset delete record', 'guard_name' => 'web'),
 		);
 
-       DB::table('permissions')->insert($permissions);
+       \DB::table('permissions')->insert($permissions);
     }
 }

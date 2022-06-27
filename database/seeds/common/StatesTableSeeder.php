@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class StatesTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class StatesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('states')->delete();
+        \DB::table('states')->delete();
 		  $states = array(
 		    array('name' => "Andaman and Nicobar Islands",'country_id' => 101),
 		    array('name' => "Andhra Pradesh",'country_id' => 101),
@@ -4136,6 +4136,6 @@ class StatesTableSeeder extends Seeder
 		    array('name' => "Midlands",'country_id' => 246)
 		    );
 		    
-		    DB::table('states')->insert($states);
+		    \DB::table('states')->insert($states);
     }
 }

@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class ReligionsTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class ReligionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('religions')->delete();  
+        \DB::table('religions')->delete();  
         $Reeligions = array(
         	array('name' => 'Islam'),
         	array('name' => 'Christianity'),
@@ -19,5 +19,5 @@ class ReligionsTableSeeder extends Seeder
         	array('name' => 'Sikh'),
         	
         );
-        DB::table('religions')->insert($Reeligions);    }
+        \DB::table('religions')->insert($Reeligions);    }
 }

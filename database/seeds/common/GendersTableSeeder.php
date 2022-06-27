@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class GendersTableSeeder extends Seeder
@@ -11,13 +11,13 @@ class GendersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('genders')->delete();
+        \DB::table('genders')->delete();
         
         $Genders = array(
         	array('name' => 'Male'),
         	array('name' => 'Femail'),
         );
 
-         DB::table('genders')->insert($Genders);
+         \DB::table('genders')->insert($Genders);
     }
 }

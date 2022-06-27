@@ -21,38 +21,7 @@
                  <li class="{{Request::is('dashboard')?'active':''}}"><a id="notInclude" class="waves-effect waves-dark navA" href="{{url('/dashboard')}}" aria-expanded="false"><i class="fas fa-tachometer-alt"></i><span class="hide-menu">Dashboard</span></a>
                 </li>
 
-<!-- HR -->               
-                <li class="{{Request::is('hrms/employee*')?'active':''}}"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fas fa-user"></i><span class="hide-menu">Human Resource</span></a>
-                    <ul aria-expanded="false" class="collapse">
-                    @can('hr user data') 
-                    @if(Auth::User()->hrEmployee)
-                    <li><a  class="{{Request::is('hrms/employee/user/data')?'active':''}}" href="{{route('user.data',Auth::User()->hrEmployee->id??'')}}">User Data</a></li>
-                    @endif
-                    @endcan
-                    @can('hr active employees') 
-                        <!-- <li ><a class="{{Request::is('hrms/employee/user')?'active':''}}" href="{{url('/hrms/testing')}}">User Detail</a></li>
-                      
-                        <li><a  class="{{Request::is('hrms/employee/allEmployeeList')?'active':''}}" href="{{route('employee.allEmployeeList')}}">All Employees</a></li> -->
-                        
-                       
-                        <li><a  class="{{Request::is('hrms/employee/activeEmployeesList')?'active':''}}" href="{{route('employee.activeEmployeesList')}}">Active Employees List</a></li>
-                    @endcan
-                   
 
-                        @canany(['hr edit record','hr delete record'])
-                        <li><a  class="{{Request::is('hrms/employee/create')?'active':''}}" href="{{route('employee.create')}}">Add Employee</a></li>
-                        <li><a  class="{{Request::is('hrms/employee/alertList')?'active':''}}" href="{{route('hrAlert.list')}}">Alerts <i class="fas fa-bell" ></i><span class="badge badge-pill badge-danger">{{appointmentExpiryTotal() + cnicExpiryTotal() + drivingLicenceExpiryTotal() + pecCardExpiryTotal()}}</span></a></li>
-                        <li><a  class="{{Request::is('hrms/employee/search')?'active':''}}" href="{{route('employee.search')}}">Search</a></li>
-                        
-                        @endcanany
-
-                        @canany(['hr view record','hr edit record','hr delete record'])
-                        <li><a  class="{{Request::is('hrms/employee')?'active':''}}" href="{{route('employee.index')}}">List of Employees</a></li>
-                        @endcanany
-                      
-                    </ul>
-                </li>
-<!-- End HR -->
 
 <!-- HR Reports -->
                 @can('hr reports')

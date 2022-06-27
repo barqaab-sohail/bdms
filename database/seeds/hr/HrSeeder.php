@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class HrSeeder extends Seeder
@@ -11,15 +11,9 @@ class HrSeeder extends Seeder
      */
     public function run()
     {
-         $this->call([
-	        HrCategoriesTableSeeder::class,
-	        HrContactTypesTableSeeder::class,
-	        HrDepartmentsTableSeeder::class,
-	        HrDesignationsTableSeeder::class,
+         $this->call([ 
 	        HrDocumentNamesTableSeeder::class,
 	        HrEmployeeTypesTableSeeder::class,
-	        HrGradesTableSeeder::class,
-	        HrLetterTypesTableSeeder::class,
 	        HrStatusesTableSeeder::class,
         ]);
     }

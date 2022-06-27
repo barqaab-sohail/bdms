@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class HrStatusesTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class HrStatusesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('hr_statuses')->delete();
+        \DB::table('hr_statuses')->delete();
         
         $HrStatuses = array(
         	array('name' => 'On Board'),
@@ -23,6 +23,6 @@ class HrStatusesTableSeeder extends Seeder
 
         );
 
-         DB::table('hr_statuses')->insert($HrStatuses);
+         \DB::table('hr_statuses')->insert($HrStatuses);
     }
 }

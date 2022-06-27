@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class LoginSeeder extends Seeder
@@ -13,9 +13,10 @@ class LoginSeeder extends Seeder
     {
         $this->call([
 	       PermissionsTableSeeder::class,
-	        RoleSeeder::class,
-	        UserTableSeeder::class,
-	        ModalHasRoleSeeder::class,
+	       RoleSeeder::class,
+	       UserTableSeeder::class,
+	       ModalHasRoleSeeder::class,
+            EmployeeSeeder::class,
         ]);
     }
 }

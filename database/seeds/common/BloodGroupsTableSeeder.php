@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class BloodGroupsTableSeeder extends Seeder
@@ -12,7 +12,7 @@ class BloodGroupsTableSeeder extends Seeder
     public function run()
     {
         
-    	DB::table('blood_groups')->delete();  
+    	\DB::table('blood_groups')->delete();  
         $BloodGroups = array(
         	array('name' => 'A+'),
         	array('name' => 'O+'),
@@ -23,7 +23,7 @@ class BloodGroupsTableSeeder extends Seeder
         	array('name' => 'B-'),
         	array('name' => 'AB-'),
         );
-        DB::table('blood_groups')->insert($BloodGroups);
+        \DB::table('blood_groups')->insert($BloodGroups);
        
     }
 }

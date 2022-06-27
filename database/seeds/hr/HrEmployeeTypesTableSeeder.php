@@ -1,7 +1,7 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-
+use DB;
 class HrEmployeeTypesTableSeeder extends Seeder
 {
     /**

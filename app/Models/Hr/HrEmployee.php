@@ -13,18 +13,13 @@ class HrEmployee extends Model implements Auditable
     use \OwenIt\Auditing\Auditable;
     protected $fillable = ['first_name', 'last_name', 'father_name', 'cnic', 'cnic_expiry', 'date_of_birth', 'employee_no', 'user_id', 'gender_id', 'hr_status_id', 'marital_status_id', 'religion_id', 'domicile_id'];
 
-    protected $appends = ['full_name','designation','project'];
+    protected $appends = ['full_name'];
     
     function getFullNameAttribute() {
         return $this->first_name . ' ' . $this->last_name;
     }
 
-    function getDesignationAttribute() {
-        return $this->employeeDesignation->last()->name??'';
-    }
-    function getProjectAttribute() {
-        return $this->employeeProject->last()->name??'';
-    }
+
 
    
 

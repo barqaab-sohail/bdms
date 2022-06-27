@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class MembershipsTableSeeder extends Seeder
@@ -11,13 +11,13 @@ class MembershipsTableSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('memberships')->delete();
+         \DB::table('memberships')->delete();
         
         $Memberships = array(
         	array('name' => 'Pakistan Engineering Council'),
         	
         );
 
-         DB::table('memberships')->insert($Memberships);
+         \DB::table('memberships')->insert($Memberships);
     }
 }

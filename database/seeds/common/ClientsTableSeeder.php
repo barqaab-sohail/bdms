@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class ClientsTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class ClientsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('clients')->delete();  
+        \DB::table('clients')->delete();  
         $Clients = array(
         	
         	array('name' => 'National Transmission and Despatch Company (NTDC)'),
@@ -36,6 +36,6 @@ class ClientsTableSeeder extends Seeder
             array('name' => 'BARQAAB Consulting Services (Pvt.) Ltd. (BARQAAB)'),
 
         );
-        DB::table('clients')->insert($Clients);
+        \DB::table('clients')->insert($Clients);
     }
 }

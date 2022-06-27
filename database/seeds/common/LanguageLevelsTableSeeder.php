@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class LanguageLevelsTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class LanguageLevelsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('language_levels')->delete();
+        \DB::table('language_levels')->delete();
         
         $LanguageLevels = array(
         	array('name' => 'Excellent'),
@@ -19,6 +19,6 @@ class LanguageLevelsTableSeeder extends Seeder
         	array('name' => 'Average'),
         );
 
-         DB::table('language_levels')->insert($LanguageLevels);
+         \DB::table('language_levels')->insert($LanguageLevels);
     }
 }

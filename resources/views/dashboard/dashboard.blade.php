@@ -31,55 +31,7 @@
 		</div>
 	</div>
 	
-		@can('hr view graph')		
 		
-		@if(Auth::User()->hrEmployee)
-			<div class="row">
-  				<div class="col-sm-6">
-					<div id="ageChart" style="width: 900px; height: 500px;"></div>
-				</div>
-				<div class="col-sm-6">
-					<div id="engineerChart" style="width: 900px; height: 500px;"></div>
-				</div>
-					
-			</div>
-			<div class="row">
-  				<div class="col-sm-6">
-					<div id="categoryChart" style="width: 900px; height: 500px;"></div>
-				</div>
-				<div class="col-sm-6">
-					<div id="departmentChart" style="width: 900px; height: 500px;"></div>
-				</div>
-					
-			</div>
-		@endif		
-		
-				@include('hr.charts.category')
-				@include('hr.charts.ageChart')
-				@include('hr.charts.engineerChart')
-				@include('hr.charts.departmentChart')
-		@endcan
-@can('Super Admin')
-	<!--TASK -->
-	<div class="card">
-		<div class="card-body">
-          	<!-- Button trigger modal -->
-          	<button type="button" class="btn btn-success float-right"  data-toggle="modal" data-target="#taskModal"> 
-            Add New Task
-          	</button>
-          
-          	<!-- Modeal Include-->
-          	@include('self.task.modal')
-          	@include('self.task.editModal')
-
-			<div id="append_data" class="table-responsive m-t-40 table-container">
-			</div>
-      	</div>
-	</div>	
-	<!--End TASK -->
-@endcan
-
-
 
 @stop
 

@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class ContractTypesTableSeeder extends Seeder
@@ -11,11 +11,11 @@ class ContractTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contract_types')->delete();  
+        \DB::table('contract_types')->delete();  
         $ContractTypes = array(
         	array('name' => 'Lumpsum'),
         	array('name' => 'Man-Months'),
         );
-        DB::table('contract_types')->insert($ContractTypes);
+        \DB::table('contract_types')->insert($ContractTypes);
     }
 }

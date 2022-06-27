@@ -1,6 +1,7 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+use DB;
 
 class CitiesTableSeeder extends Seeder
 {
@@ -11,7 +12,7 @@ class CitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cities')->delete();
+        \DB::table('cities')->delete();
 		$cities = array(
 		array('name' => "Bombuflat",'state_id' => 1),
 		array('name' => "Garacharma",'state_id' => 1),
@@ -48256,7 +48257,7 @@ class CitiesTableSeeder extends Seeder
 		array('name' => "Summersville",'state_id' => 3976),
 				);
         
-        DB::table('cities')->insert($cities);
-        DB::table('cities')->where('id', '>=', 31162)->increment('state_id');
+        \DB::table('cities')->insert($cities);
+        \DB::table('cities')->where('id', '>=', 31162)->increment('state_id');
     }
 }

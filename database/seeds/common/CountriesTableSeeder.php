@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class CountriesTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class CountriesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('countries')->delete();
+        \DB::table('countries')->delete();
 		  $countries = array(
 		    array('id' => 1,'code' => 'AF' ,'name' => "Afghanistan",'phonecode' => 93),
 		    array('id' => 2,'code' => 'AL' ,'name' => "Albania",'phonecode' => 355),
@@ -261,6 +261,6 @@ class CountriesTableSeeder extends Seeder
 		    array('id' => 246,'code' => 'ZW','name' => "Zimbabwe",'phonecode' => 263),
 		    );
 		
-		DB::table('countries')->insert($countries);
+		\DB::table('countries')->insert($countries);
     }
 }

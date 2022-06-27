@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class OfficeSeeder extends Seeder
@@ -11,7 +11,7 @@ class OfficeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('offices')->delete();
+        \DB::table('offices')->delete();
         
         $Offices = array(
         	array('name' => 'Head Office'),
@@ -21,6 +21,6 @@ class OfficeSeeder extends Seeder
         	array('name' => 'Site Office'),
         );
 
-         DB::table('offices')->insert($Offices);
+         \DB::table('offices')->insert($Offices);
     }
 }

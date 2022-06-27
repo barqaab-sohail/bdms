@@ -51,17 +51,10 @@
                 <!-- Notification -->
                 <li class="nav-item dropdown"> 
                     <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark"  href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell" ></i><span class="badge badge-pill badge-danger">{{appointmentExpiryTotal() + cnicExpiryTotal() + drivingLicenceExpiryTotal() + pecCardExpiryTotal()}}</span>
+                    <i class="fas fa-bell" ></i><span class="badge badge-pill badge-danger"></span>
                     </a>
                      <div class="dropdown-menu dropdown-menu-right scale-up">
-                        <ul class="dropdown-user">
-                            <li><a  href="{{route('hrAlert.list')}}"  class="link" data-toggle="tooltip" title="Click for detail">{{appointmentExpiryTotal()}} Employees Contract are Expired</a></li>
-                            <li><a  href="{{route('hrAlert.list')}}"  class="link" data-toggle="tooltip" title="Click for detail">{{cnicExpiryTotal()}} Employees CNIC are Expired</a></li>
-                            <li><a  href="{{route('hrAlert.list')}}"  class="link" data-toggle="tooltip" title="Click for detail">{{drivingLicenceExpiryTotal()}} Driver Licence are Expired</a></li>
-                            <li><a  href="{{route('hrAlert.list')}}"  class="link" data-toggle="tooltip" title="Click for detail">{{pecCardExpiryTotal()}} PEC Card are Expired</a></li>
-                            <!-- <li><a href=""  class="link" data-toggle="tooltip" title="Create Notification"><i class="fa fa-bell"></i> Create Notification</a></li>
-                            <li><a href=""  class="link" data-toggle="tooltip" title="Send Notification to HR"><i class="fas fa-arrow-right"></i> Send Message to HR</a></li>       -->               
-                        </ul>                     
+                                           
                     </div>                 
                 </li>
                 @endcan

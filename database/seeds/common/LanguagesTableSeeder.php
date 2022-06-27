@@ -1,5 +1,5 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class LanguagesTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class LanguagesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('languages')->delete();
+        \DB::table('languages')->delete();
 		 $languages = array(
             array(
                 "name" => "Inglés",
@@ -303,6 +303,6 @@ class LanguagesTableSeeder extends Seeder
                 "code" => "XH"),
 
         );
-		DB::table('languages')->insert($languages);
+		\DB::table('languages')->insert($languages);
     }
 }
