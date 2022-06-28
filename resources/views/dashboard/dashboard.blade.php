@@ -25,7 +25,7 @@
 			<h4 class="card-title">Salaries</h4>
 			-->
 			
-			<h2 >{{ucwords (Auth::User()->hrEmployee->first_name??'')}} {{ucwords(Auth::User()->hrEmployee->last_name??'')}} Welcome to HRMS</h2>
+			<h2 >{{ucwords (Auth::User()->hrEmployee->first_name??'')}} {{ucwords(Auth::User()->hrEmployee->last_name??'')}} Welcome to BDMS</h2>
 
 
 		</div>
