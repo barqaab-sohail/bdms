@@ -31,8 +31,6 @@ class HomeController extends Controller
     public function index()
     {
 
-        // $allRoutes = Route::getRoutes();
-        // dd($allRoutes);
 
        
         return view('dashboard.dashboard');

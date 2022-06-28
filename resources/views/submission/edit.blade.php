@@ -1,5 +1,5 @@
 @extends('layouts.master.master')
-@section('title', 'BARQAAB HR')
+@section('title', 'BARQAAB BDMS')
 @section('Heading')
 	<h3 class="text-themecolor">Submission Name</h3>
 	<ol class="breadcrumb">

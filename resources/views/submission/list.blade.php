@@ -1,5 +1,5 @@
 @extends('layouts.master.master')
-@section('title', 'BARQAAB HR')
+@section('title', 'BARQAAB BDMS')
 @section('Heading')
 	<!-- <h3 class="text-themecolor">List of Employees</h3> -->
 @stop
@@ -53,13 +53,13 @@
                         	</select>   
 	                    </div>
 	                    <div class="form-group">
-	                        <label class="control-label text-right">Project Name</label>
+	                        <label class="control-label text-right">Project Name<span class="text_requried">*</span></label>
 	                        <input type="text" name="project_name" id="project_name" value="{{ old('project_name') }}" class="form-control"  placeholder="Please enter Project Name">    
 	                    </div>
 	                    <div class="row">
 			                <div class="col-md-2">
 				                <div class="form-group">
-			                        <label class="control-label text-right">Submission Date<span class="text_requried">*</span></label><br>
+			                        <label class="control-label text-right">Submission Date</label><br>
 			                         <input type="text" id="submission_date" name="submission_date" value="{{ old('submission_date') }}" class="form-control date_input" readonly>     
                             		<br>
                             		<i class="fas fa-trash-alt text_requried"></i>
@@ -75,7 +75,7 @@
 			                </div>
 			                <div class="col-md-8">
 			                	<div class="form-group">
-		                        	<label class="control-label text-right">Submission Address<span class="text_requried">*</span></label><br>
+		                        	<label class="control-label text-right">Submission Address</label><br>
 		                          	<input type="text" name="address"  id="address" value="{{old('address')}}" class="form-control">
 		                          	
 		                    	</div>

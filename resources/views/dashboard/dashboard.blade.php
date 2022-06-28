@@ -1,5 +1,5 @@
 @extends('layouts.master.master')
-@section('title', 'BARQAAB HR')
+@section('title', 'BARQAAB BDMS')
 
 
 @section('Heading')
@@ -39,15 +39,8 @@
 <script>
 $(document).ready(function () {
   
-	//var url = "{{route('task.index')}}";
-	//refreshTable("{{route('task.index')}}");
-	//load_data();
-	$('#fromImportSalary').on('submit', function(event){
-	 	//preventDefault work through formFunctions;
-		url="{{route('employeeSalaryImport')}}";
-		$('.fa-spinner').show();	
-	   	submitFormAjax(this, url);
-	}); //en
+	
+	
 
 	$('#myDataTable').DataTable({
         stateSave: false,
@@ -64,36 +57,7 @@ $(document).ready(function () {
 });
 	
 
-	 function load_data(){
-    var loadUrl = "{{route('task.index')}}";
-          $("#append_data").load(loadUrl, function (){
-            $('#myTable').DataTable({
-              stateSave: false,
-              "order": [[ 2, "asc" ]],
-              "destroy": true,
-              "columnDefs": [
-              { "width": "30%", "targets": 0, },
-              {"targets": "_all", "className": "dt-center"}
-              ],
-                   dom: 'Blfrtip',
-                    buttons: [
-                        {
-                            extend: 'copyHtml5',
-                            exportOptions: {
-                                columns: [ 0, 1, 2]
-                            }
-                        },
-                        {
-                            extend: 'excelHtml5',
-                            exportOptions: {
-                                columns: [ 0, 1, 2]
-                            }
-                        },
-                    ]
-                 
-            });
-        });
-  	}
+	
 
 </script>
 @endpush

@@ -112,7 +112,7 @@ thead th {
 
 @yield('footer')
     <div style="text-align:center">
-        <p>HRMS 5.10 - Developed by: BARQAAB IT</p>
+        <p>BDMS - Developed by: Syed Azhar Ali Shah</p>
     </div>
 </body>
 

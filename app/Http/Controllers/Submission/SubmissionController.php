@@ -36,6 +36,16 @@ class SubmissionController extends Controller
               return $data->subType->name??'';
 
             })
+            ->editColumn('client_id', function($data){
+              
+              return $data->client->name??'';
+
+            })
+            ->editColumn('sub_division_id', function($data){
+              
+              return $data->subDivision->name??'';
+
+            })
             ->addColumn('edit', function($data){
 
                   
@@ -257,9 +267,8 @@ class SubmissionController extends Controller
                             ->when($data['sub_status_id'], function ($query) use ($data){
                                 return $query->where('sub_status_id','=',$data['sub_status_id']);
                             })
-                            
                         ->select('submissions.*')
-                        //->distinct('id')
+                        ->distinct('id')
                         ->get();
         return view('submission.search.result',compact('result'));
     }
