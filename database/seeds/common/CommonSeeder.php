@@ -1,5 +1,4 @@
 <?php
-namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 class CommonSeeder extends Seeder
@@ -25,6 +24,8 @@ class CommonSeeder extends Seeder
 	        CurrencySeeder::class,
 	        PartnerSeeder::class,
 	        OfficeSeeder::class,
+	        PrDivisionsTableSeeder::class,
+	        PrRolesTableSeeder::class,
         ]);
     }
 }

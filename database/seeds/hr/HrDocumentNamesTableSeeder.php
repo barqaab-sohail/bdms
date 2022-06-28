@@ -1,7 +1,7 @@
 <?php
-namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
-use DB;
+
 
 class HrDocumentNamesTableSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class HrDocumentNamesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('hr_document_names')->delete();  
+        \DB::table('hr_document_names')->delete();  
         $HrDocumentNames = array(
         	array('name' => 'Appointment Letter'),
         	array('name' => 'CNIC Front'),
@@ -23,6 +23,6 @@ class HrDocumentNamesTableSeeder extends Seeder
         	array('name' => 'Engineering Degree Graduation'),
         	array('name' => 'Engineering Degree MSc'),
         );
-        DB::table('hr_document_names')->insert($HrDocumentNames);
+        \DB::table('hr_document_names')->insert($HrDocumentNames);
     }
 }

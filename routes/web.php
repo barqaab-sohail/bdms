@@ -19,6 +19,24 @@ Route::get('/dashboard','HomeController@index')->middleware('auth')->name('dashb
 //Route::get ('insert','Hr\EmployeeController@insert');
 // Route::get('/test','HomeController@test')->middleware('auth')->name('test');
 Auth::routes();
+//Submission Routes
+Route::group(['prefix' => 'hrms', 'middleware' => ['auth','XssSanitizer'], 'namespace'=>'Submission'], function(){
+	
+	Route::get('/submission/eoiReference','SubmissionController@eoiReference');
+	Route::get('/submission/submissionNo/{id}','SubmissionController@submissionNo');
+	Route::get('/submission/search','SubmissionController@search')->name('submission.search');
+	Route::get('/submission/search/result','SubmissionController@result')->name('submission.result');
+	Route::resource('/submission', 'SubmissionController');
+	Route::resource('/submissionPartner', 'PartnerController');
+	Route::resource('/submissionDate', 'DateAndTimeController');
+	Route::resource('/submissionContact', 'SubContactController');
+	Route::resource('/submissionScope', 'SubScopeController');
+	Route::resource('/submissionPosition', 'SubPositionController');
+	Route::resource('/submissionCompetitor', 'SubCompetitorController');
+	Route::resource('/submissionDocument', 'SubDocumentController');
+	// Route::get('/submissionDocument/refreshTable', 'SubmissionDocumentController@refreshTable')->name('submissionDocument.table');
+
+});
 
 // Route::group(['prefix' => 'code', 'middleware' => ['auth','XssSanitizer'], 'namespace'=>'Auth','name' =>'opt.'], function(){
 // Route::resource('/','RegisterController',['only'=>['create','store']]);

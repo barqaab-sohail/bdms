@@ -12,7 +12,7 @@
                 <!--End Logo icon -->
                 <!-- Logo text -->
                 <span>
-                    <h3 class="light-logo"> <img src="{{asset('Massets/images/bqb-white-logo-2.png')}}"/></h3>
+                    <img src="{{asset('Massets/images/bqb-white-logo-2.png')}}" width=75%/>
                 </span> 
             </a>
         </div>
@@ -38,24 +38,14 @@
                 @can('Super Admin')
                 <!-- Message -->
                 <li class="nav-item dropdown"> 
-                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark"  href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-envelope"></i>
-                    </a>
-                     <div class="dropdown-menu dropdown-menu-right scale-up">
-                        <ul class="dropdown-user">
-                            <li><a href=""  class="link" data-toggle="tooltip" title="Send Message"><i class="far fa-paper-plane"></i> Send Message</a></li>
-                        </ul>                     
-                    </div>                 
+                    
+                              
                 </li> 
                
                 <!-- Notification -->
                 <li class="nav-item dropdown"> 
-                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark"  href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-bell" ></i><span class="badge badge-pill badge-danger"></span>
-                    </a>
-                     <div class="dropdown-menu dropdown-menu-right scale-up">
-                                           
-                    </div>                 
+                    
+                               
                 </li>
                 @endcan
                 <!-- Employee Picture -->
